@@ -1,18 +1,13 @@
-# ALIVE
-Asynchronous Lower Body Pose Estimation with Images, Visual-Inertial Odometry and Electromyography
 
-
-
-
-## Intro
+# Intro
 
 This repo is only for training pipeline and implementation. Dataset is not provided in this repo.
 
-## Training Data preparation
+# Training Data preparation
 
 We use AlphaPose to generate 2D ref pose and MotionBERT to generate 3D ref poses.
 
-### Inference Camera 2D Pose
+## Inference Camera 2D Pose
 
 ```
 git clone and open the directory to project AlphaPose
@@ -24,7 +19,7 @@ python scripts/demo_inference.py --cfg configs/halpe_26/resnet/256x192_res50_lr1
 
 ```
 
-### Check results on folder
+## Check results on folder
 
 ```
 cd /your_path_to_the/AlphaPose/examples/res
@@ -32,7 +27,7 @@ cd /your_path_to_the/AlphaPose/examples/res
 ```
 
 
-### Inference Camera 3D Pose
+## Inference Camera 3D Pose
 
 <!-- 根据需求 修改路径  -->
 ```
@@ -45,7 +40,7 @@ python infer_wild.py  --vid_path /your_path_to_the/infra_cam  --json_path /your_
 ```
 
 
-### Check results on folder
+## Check results on folder
 
 ```
 cd {--out_path /your_path_to_the/test_out}
@@ -53,7 +48,7 @@ cd {--out_path /your_path_to_the/test_out}
 ```
 
 
-### split the dataset 
+## split the dataset 
 
 Generate the npy file to finish the data prepration
 
@@ -66,6 +61,6 @@ split_data = pred_data[0:200, : , :]
 
 ```
 
-## Prepare the Multi-Modality Data 
+# Prepare the Multi-Modality Data 
 
 refer to the script in read_data.py and  data_preproc_base.py to align the timestamp and data
